@@ -20,7 +20,7 @@
         <!-- 模块描述，显示在xposed模块列表那里第二行 -->
         <meta-data
             android:name="xposeddescription"
-            android:value="不可以涩涩" />
+            android:value="lsposed template" />
         <!-- 最低xposed版本号(lib文件名可知,一般填54即可) -->
         <meta-data
             android:name="xposedminversion"

@@ -39,7 +39,9 @@ set_target_properties(frida-gum PROPERTIES
 # used in the AndroidManifest.xml file.
 add_library(${CMAKE_PROJECT_NAME} SHARED
     # List C/C++ source files with relative paths to this CMakeLists.txt.
-    lsposed_template.cpp)
+    lsposed_template.cpp
+    native_logger.cpp
+    so_load_monitor.cpp)
 
 # Specifies libraries CMake should link to your target library. You
 # can link libraries from various origins, such as libraries defined in this
