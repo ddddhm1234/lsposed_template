@@ -50,6 +50,7 @@ public class MainHook implements IXposedHookLoadPackage {
                 + " cl=" + lpparam.classLoader);
         hookAndroidBase();
         hookKnownClasses(lpparam.classLoader);
+        TicketGuardHook.install(lpparam.classLoader);
         hookClassLoader();
     }
 
@@ -757,7 +758,7 @@ public class MainHook implements IXposedHookLoadPackage {
         }
     }
 
-    private static void log(String msg) {
+    static void log(String msg) {
         String line = "[" + TAG + "] " + msg;
         XposedBridge.log(line);
         Log.i(TAG, msg);
